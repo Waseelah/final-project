@@ -3,14 +3,14 @@ import React from "react";
 const Second = () => {
   return (
     <div>
-      <section class="bg-gray-100 ">
-        <div class="max-w-270 mx-auto px-6 text-center py-50">
+      <section class="bg-gray-100 max-w-auto ">
+        <div class=" mx-30 px-6 text-center py-50 ">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 w-160 mx-auto leading-snug">
             Sending money across Africa shouldn’t be expensive or confusing
-          </h2>
+</h2>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 ">
-            <div class="bg-white rounded-3xl shadow-sm p-6 text-left ">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-12 ">
+            <div class="bg-white rounded-3xl shadow-sm p-6 text-left w-90 ">
               <div class="w-8 h-8 rounded-md flex items-center justify-center mb-4">
              <img src="document.png" alt=""className="" />
               </div>
@@ -22,7 +22,7 @@ const Second = () => {
               </p>
             </div>
 
-            <div class="bg-white rounded-3xl shadow-sm p-6 text-left ">
+            <div class="bg-white rounded-3xl shadow-sm p-6 text-left w-90 ">
               <div class="w-8 h-8  rounded-md flex items-center justify-center mb-4">
                 <img src="result.png" alt="" />
               </div>
@@ -34,7 +34,7 @@ const Second = () => {
               </p>
             </div>
 
-            <div class="bg-white rounded-3xl shadow-sm p-6 text-left ">
+            <div class="bg-white rounded-3xl shadow-sm p-6 text-left w-80 ">
               <div class="w-8 h-8 rounded-md flex items-center justify-center mb-4">
                 <img src="last.png" alt="" />
               </div>
