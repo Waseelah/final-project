@@ -2,15 +2,9 @@ import React from "react";
 
 const FirstSection = () => {
   return (
-<<<<<<< HEAD
-    <div className="w-100vw h-128 overflow-inline ">
-      <div className=" w-100vw flex justify-between mx-60 h-5">
-        <div className="mt-20 w-125">
-=======
     <div className="w-100vw h-128 overflow-inline bg-gray-100">
       <div className=" w-100vw flex justify-between h-5">
         <div className="mt-20 w-125 mx-15">
->>>>>>> 597d829f30f24600e6df62cb5e632d5eba7be2d1
           <h1 className="text-[70px] font-bold text-[#141B34]  w-175 ">
             Send money <span className="text-[#0F0E0E]">Across Africa. </span>
             <span className="text-[#FFB700]"> Fast. Fair. Transparent. </span>

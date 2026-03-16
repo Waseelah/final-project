@@ -1,17 +1,18 @@
 import React from 'react'
 import profileimg from '../assets/profile1.png';
 import profile from '../assets/profile2.png';
+import shigo from '../assets/shigo.png';
 
 const voices = () => {
     const testimonials = [{
         quote: "Remit changed how i support my parents in Lagos. It's faster than any bank i have used.",
         name: "Adewale K",
-        Route: "Lagos via Uganda",
+        route: "Lagos via Uganda",
         avatar: profileimg,
     }, {
         quote: "The tracking feature gives me such peace of mind.",
-        name: "Adewale k",
-        Rounte: "Kenya via Tanzania",
+        name: "Sarah M",
+        route: "Kenya via Tanzania",
         avatar: profile,
     }, {
         quote: "I was skeptical about the rates being low",
@@ -38,15 +39,19 @@ const voices = () => {
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 ">
                     {testimonials.map((item, index) => (
                         <div key={index} className="flex flex-col justify-between border rounded-[18px] ">
+                            <div className='mb-6'>
+                                <img src="{shigo}" alt="logo" className='w-[30px] h-auto ' />
+
+                            </div>
                             {/* quote */}
                             <div className="px-2">
-                                <p className="text-[#111111] italic text-[22px] sm:text-[28px] leading-[1.2] tracking-[-0.02em]">
+                                <p className="text-[#111111] italic text-[19px] sm:text-[20px] leading-[1.2] tracking-[-0.02em]">
                                     “{item.quote}”
                                 </p>
                             </div>
 
                             {/* profile strip */}
-                            <div className="mt-10 rounded-[22px] bg-[#d8a400] px-4 py-4 flex items-center gap-4 min-h-[84px]">
+                            <div className="mt-10 rounded-[10px] bg-[#d8a400] px-4 py-4 flex items-center gap-4 min-h-[84px]">
                                 <img
                                     src={item.avatar}
                                     alt={item.name}
@@ -54,7 +59,7 @@ const voices = () => {
                                 />
 
                                 <div>
-                                    <h3 className="text-black text-[20px] sm:text-[24px] font-semibold leading-none">
+                                    <h3 className="text-black text-[15px] sm:text-[20px] font-bold leading-none">
                                         {item.name}
                                     </h3>
                                     <p className="mt-1 text-black/85 text-[14px] sm:text-[17px] leading-none">
