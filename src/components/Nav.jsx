@@ -18,17 +18,13 @@ const Nav = () => {
             <p>Support</p>
         </div>
         <div className='flex items-center gap-8 text-[12px] text-[#111]'>
+          <a href="/SignUp">
             <button>Login</button>
+            </a>
             <button>About</button>
+            
         </div>
-        <div className='md:hidden px-4 py-4 space-y-3 text-[13px] text-[#111]'>
-            <a href="#"className='block'>How it works</a>
-            <a href="#"className='block'>Transparency</a>
-            <a href="#"className='block'>Support</a>
-            <a href="/SignUp"className='block'>login</a>
-            <a href="#"className='block'>About</a>
-        </div>
-        
+       
     </nav>
 
   )

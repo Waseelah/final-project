@@ -3,10 +3,10 @@ import React from 'react'
 const Work = () => {
   return (
     <div>
-      <section class="bg-[#0E1C3F] py-20 px-6">
-        <div class="max-w-4xl mx-auto">
+      <section class="bg-[#0E1C3F] py-20 px-6 h-screen">
+        <div class=" max-w-4xl mx-auto ">
             <h2 class="text-white text-4xl font-bold text-center mb-12">How It Works</h2>
-            <div class="flex flex-col gap-[-] w-137.5 mx-40 ">
+            <div class="flex flex-col relative  max-w-120.5 mx-40 ">
                 <div class="bg-[#3d5086] border border-[#1e3060] rounded-2xl px-10 py-6 flex items-start gap-6  ">
                     <span class="text-[#F5A623] text-3xl font-bold">01</span>
                     <div>
@@ -17,7 +17,7 @@ const Work = () => {
                     </div>
                 </div>
 
-                <div class="bg-[#3d5086] border border-[#1e3060] rounded-2xl px-10 py-6 flex items-start gap-6 ">
+                <div class="bg-[#3d5086]  absolute top-24 rounded-2xl px-10 py-6 flex items-start gap-6 w-120.5   border-gray-500 border-t-6  ">
                     <span class="text-[#F5A623] text-3xl font-bold">02</span>
                     <div>
                         <h3 class="text-white font-bold text-lg flex items-center gap-2">
@@ -27,7 +27,7 @@ const Work = () => {
                     </div>
                 </div>
 
-                <div class="bg-[#3d5086] border border-[#1e3060] rounded-2xl px-10 py-6 flex items-start gap-6 ">
+                <div class="bg-[#3d5086] absolute top-52  rounded-2xl px-10 py-6 flex items-start gap-6 border-t-gray-500 border-t-6 ">
                     <span class="text-[#F5A623] text-3xl font-bold">03</span>
                     <div>
                         <h3 class="text-white font-bold text-lg flex items-center gap-2">

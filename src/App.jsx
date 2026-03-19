@@ -3,12 +3,21 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
 import SignUp  from "./Pages/SignUp";
+import Nav from "./components/Nav";
 
 const App = () => {
   return (
     <div>
-      <LandingPage />
-      <SignUp />
+      
+    
+      <Routes>
+          <Route path='/' element={<LandingPage />} />
+         <Route path='/SignUp' element={<SignUp />} />
+         
+
+      </Routes>
+    
+   
     </div>
   );
 };
