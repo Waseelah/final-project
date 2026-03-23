@@ -3,7 +3,7 @@ import FirstSection from "../components/First";
 import Second from "../components/Second";
 import BuiltForTrust from "../components/builtForTrust";
 import Work from "../components/Work";
-import Receive from "../components/receive";
+import Receive from "../components/Receive";
 import Smarter from "../components/Smarter";
 import Nav from "../components/Nav";
 import SendAcross from "../components/Send";
