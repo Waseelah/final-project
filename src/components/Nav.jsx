@@ -7,8 +7,9 @@ const Nav = () => {
     <nav className=" flex items-center justify-between md:px-10 sm:px-5 py-2.25 align-center">
         <div className='w-15 h-7 '>
     
-
-     <img src='LOGO.svg' alt="logo" />
+<a href="/DashboardLayout">
+     <img src='LOGO.svg' alt="logo"/>
+     </a>
             </div>
         
         <div className='hidden md:flex items-center gap-10 text-[13px] text-black' >

@@ -8,8 +8,8 @@ import Smarter from "../components/Smarter";
 import Nav from "../components/Nav";
 import SendAcross from "../components/Send";
 import Voices from "../components/voices"
-
 import Footer from "../components/footer";
+
 const LandingPage = () => {
   return (
     <div>

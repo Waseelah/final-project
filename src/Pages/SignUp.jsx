@@ -1,5 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import {auth} from "../firebase/firebase"
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { updateProfile } from "firebase/auth";
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -13,42 +16,70 @@ const SignUp = () => {
   });
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    
-    // Check password length
-    if (formData.password.length < 6 || formData.confirmPassword.length < 6) {
-      alert("password is too short");
-      return;
-    }
+  // Basic validation first (frontend)
+  if (
+    !formData.firstName ||
+    !formData.lastName ||
+    !formData.email ||
+    !formData.password ||
+    !formData.confirmPassword
+  ) {
+    alert("Please fill all fields");
+    return;
+  }
 
-    if (formData.password !== formData.confirmPassword) {
-      alert("Password not match");
-      return;
-    }
+  if (formData.password !== formData.confirmPassword) {
+    alert("Passwords do not match");
+    return;
+  }
 
-    // Basic validation
-    if (
-      !formData.firstName ||
-      !formData.lastName ||
-      !formData.email ||
-      !formData.password
-    ) {
-      alert("Please fill all fields");
-      return;
-    }
+ try {
+    const userCredential = await createUserWithEmailAndPassword(
+      auth,
+      formData.email,
+      formData.password
+    );
 
-    console.log("form Data:", formData);
+    const user = userCredential.user;
 
-    // Simulate API call
+    // ✅ Save full name
+    await updateProfile(user, {
+      displayName: `${formData.firstName} ${formData.lastName}`,
+    });
+
+    console.log("User created:", user);
+
     alert("Account created successfully!");
-  };
+  } catch (error) {
+    // Firebase handles validation like:
+    // - weak password
+    // - invalid email
+    // - email already in use
+
+    if (error.code === "auth/weak-password") {
+      alert("Password should be at least 6 characters");
+    } else if (error.code === "auth/email-already-in-use") {
+      alert("Email already in use");
+    } else if (error.code === "auth/invalid-email") {
+      alert("Invalid email address");
+    } else {
+      alert(error.message);
+    }
+
+    console.error(error);
+  }
+};
 
   return (
-    <div className="flex h-screen w-full overflow-hidden">
+    <div className="flex h-screen w-full">
       <div className="w-1/2 bg-white flex items-center justify-center px-10">
         <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md">
           <h2 className="text-xl font-semibold text-gray-800 mb-6">
