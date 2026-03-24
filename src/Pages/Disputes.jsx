@@ -68,7 +68,7 @@ const Disputes = () => {
         <div className="flex-1 flex flex-col gap-4">
 
           {/* Issue Category Card */}
-          <div className="bg-blue-900 rounded-2xl p-6">
+          <div className="bg-[#0E1C3F] rounded-2xl p-6">
             <p className="text-sm font-semibold text-white mb-4">
               Issue Category
             </p>
@@ -183,7 +183,7 @@ const Disputes = () => {
           </h3>
 
           {/* Spotify Transaction */}
-          <div className="bg-blue-900 rounded-2xl p-4 flex items-center justify-between">
+          <div className="bg-[#0E1C3F] rounded-2xl p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-full bg-green-600 flex items-center justify-center">
                 <span className="text-white text-base">🎵</span>
@@ -198,7 +198,7 @@ const Disputes = () => {
           </div>
 
           {/* Amazon Transaction */}
-          <div className="bg-blue-900 rounded-2xl p-4 flex items-center justify-between">
+          <div className="bg-[#0E1C3F] rounded-2xl p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-full bg-yellow-600 flex items-center justify-center">
                 <span className="text-white text-base">📦</span>
@@ -233,7 +233,7 @@ const Disputes = () => {
           </div>
 
           {/* Disclaimer */}
-          <div className="bg-blue-900 rounded-2xl p-4">
+          <div className="bg-[#0E1C3F] rounded-2xl p-4">
             <div className="flex items-start gap-3">
               <div className="w-5 h-5 rounded-full border-2 border-blue-400 flex items-center justify-center mt-0.5 flex-shrink-0">
                 <div className="w-2 h-2 rounded-full bg-blue-400" />
@@ -257,7 +257,7 @@ const Disputes = () => {
         </button>
         <button
           onClick={handleSubmit}
-          className="px-10 py-2.5 bg-blue-900 hover:bg-blue-800 text-white rounded-full text-sm font-medium transition-colors"
+          className="px-10 py-2.5 bg-[#0E1C3F] hover:bg-blue-800 text-white rounded-full text-sm font-medium transition-colors"
         >
           Submit Dispute
         </button>

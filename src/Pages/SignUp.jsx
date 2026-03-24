@@ -59,11 +59,7 @@ const SignUp = () => {
 
     alert("Account created successfully!");
   } catch (error) {
-    // Firebase handles validation like:
-    // - weak password
-    // - invalid email
-    // - email already in use
-
+   
     if (error.code === "auth/weak-password") {
       alert("Password should be at least 6 characters");
     } else if (error.code === "auth/email-already-in-use") {
@@ -250,7 +246,7 @@ const SignUp = () => {
             <p className="text-center text-xs text-gray-500">
               Already have an account?{" "}
               <a
-                href="/SignUp"
+                href="/Login"
                 className="text-[#1a2d5a] font-semibold hover:underline"
               >
                 Login
