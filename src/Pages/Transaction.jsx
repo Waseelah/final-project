@@ -46,54 +46,21 @@ const Transaction = () => {
             date: "March 8, 2026",
             amount: "$300.00",
             status: "Completed",
-
-            
-            type: "Funding Received",
-            icon: <BiSolidDollarCircle className="text-green-500" />,
-            date: "Feb 10, 2026",
-            amount: "$300.00",
-            status: "Completed",
-        },
-        {
-            type: "Money Debit",
-            icon: <BiSolidDollarCircle className="text-red-500" />,
-            date: "March 5, 2026",
-            amount: "$300.00",
-            status: "Completed",
-        },
-        {
-            type: "Monthly Subscription",
-            icon: <IoWifi className="text-yellow-500" />,
-            date: "March 2, 2026",
-            amount: "$300.00",
-            status: "Refunded",
-        },
-        {
-            type: "Utility Bills",
-            icon: <FaArrowTrendUp className="text-yellow-500" />,
-            date: "March 6, 2026",
-            amount: "$300.00",
-            status: "Canceled",
-        },
-        {
-            type: "Card Transaction",
-            icon: <FaArrowTrendUp className="text-yellow-500" />,
-            date: "March 8, 2026",
-            amount: "$300.00",
-            status: "Completed",
         },
     ];
 
     const getStatusStyle = (status) => {
-        switch (status) {
-            case "Completed":
+        const s = status?.trim().toLowerCase();
+        switch (s) {
+            case "completed":
                 return "bg-green-100 text-green-700";
-            case "Refunded":
+            case "refunded":
                 return "bg-yellow-100 text-yellow-700";
-            case "Canceled":
+            case "canceled":
+            case "cancelled":
                 return "bg-red-100 text-red-700";
             default:
-                return "";
+                return "bg-gray-100 text-gray-700";
         }
     };
 
